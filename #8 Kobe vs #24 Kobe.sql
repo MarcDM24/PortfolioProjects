@@ -55,6 +55,9 @@ SELECT [Season], [Age], [PTS], [TRB], [AST], [STL], [BLK], [tFG%], [3P%], [FT%]
 FROM KobeBryantCareer
 WHERE  RSorPO = 'Regular Season' AND Age <28 
 
+SELECT Season, [tFG%],[3P%], [FT%]
+FROM KobeBryantCareer
+WHERE  RSorPO = 'Regular Season' AND Age <28 
 	
 SELECT [Season], [Age], [PTS], [TRB], [AST], [STL], [BLK], [tFG%], [3P%], [FT%] 
 FROM KobeBryantCareer
@@ -64,5 +67,12 @@ SELECT Season, [tFG%],[3P%], [FT%]
 FROM KobeBryantCareer
 WHERE  RSorPO = 'Regular Season' AND Age >27 
 
+--- Collect career totals stats for visualization
 
+SELECT RSorPO, G, [tPTS], [tTRB], [tAST], [tSTL], [tBLK], [tFG%], [t3P%], [FT%]
+FROM KobeBryantCareer
+WHERE  RSorPO = 'Regular Season' AND Age <28 
 
+SELECT RSorPO, G, [tPTS], [tTRB], [tAST], [tSTL], [tBLK], [tFG%], [t3P%], [FT%]
+FROM KobeBryantCareer
+WHERE  RSorPO = 'Regular Season' AND Age >27 
